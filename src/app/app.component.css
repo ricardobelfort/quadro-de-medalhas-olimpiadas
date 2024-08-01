@@ -1,0 +1,187 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url("./../assets/images/olympics-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  overflow: auto;
+
+  & header {
+    text-align: center;
+
+    & img {
+      height: 70px;
+      margin-bottom: 1rem;
+    }
+
+    & h1 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      text-shadow: rgba(255, 255, 255, 0.5) 0px 0px 3px;
+    }
+
+    & p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      text-shadow: rgba(255, 255, 255, 0.5) 0px 0px 2px;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .list-of-medal {
+      padding: 0.5rem;
+      background-color: #fff;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+
+      .input-search {
+        position: relative;
+
+        input[type="search"] {
+          width: 300px;
+          margin: 1rem 0 1.3rem 0.5rem;
+          padding: 0.75rem;
+          border: 1px solid #f2f2f2;
+          border-radius: 6px;
+          font-size: 0.875rem;
+        }
+
+        .icon-search {
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .medal-table {
+        border-collapse: collapse;
+        width: 100%;
+
+        thead {
+          display: table;
+          width: calc(100% - 8px);
+        }
+
+        tbody {
+          display: block;
+          height: 350px;
+          overflow: auto;
+
+          /* For WebKit browsers (Chrome, Safari) */
+          &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+          }
+
+          &::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 0.2);
+          }
+
+          &::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0);
+            border-radius: 4px;
+          }
+
+          /* For Firefox */
+          * {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+
+      .medal-table td,
+      .medal-table th {
+        padding: 18px;
+        text-align: center;
+        border-bottom: 1px solid #f2f2f2;
+        height: 70px;
+      }
+
+      .medal-table tr:nth-child(even) {
+        background-color: #fff;
+      }
+
+      .medal-table tr:hover {
+        background-color: #f2f2f2;
+      }
+
+      .medal-table th {
+        text-align: center;
+        background-color: #fafafa;
+      }
+
+      .medal-table .country {
+        text-align: left !important;
+        display: flex;
+        align-items: center;
+        height: 62px;
+
+        & img {
+          margin-right: 10px;
+        }
+      }
+
+      .medal-table .bd-country {
+        width: 248px;
+        height: 62px;
+        text-align: left !important;
+      }
+
+      .medal-table .medal-cell-gold {
+        line-height: 0;
+        text-align: center;
+        width: 70px;
+        height: 62px;
+        background-color: rgba(233, 209, 107, 0.2);
+      }
+
+      .medal-table .medal-cell {
+        line-height: 0;
+        text-align: center;
+        width: 70px;
+        height: 62px;
+      }
+    }
+
+    .loading {
+      width: 540px;
+      height: 400px;
+      padding: 4rem;
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  footer {
+    width: 500px;
+    padding: 1rem;
+    text-align: center;
+
+    p:last-child {
+      margin-top: 1rem;
+    }
+  }
+}
